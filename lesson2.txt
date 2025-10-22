@@ -1,0 +1,65 @@
+
+1.
+- Khởi tạo: git init (chỉ cần lần đầu khi mới tạo repo)
+- Cấu hình:
+    - git add <file_name>: Tạo 1 bản sao file từ vùng working directory lên vùng staging 
+    - git commit -m "message": Đưa các file từ vùng staging area lên repository, đồng thời tạo ra 1 phiên bản với message được lưu lại.
+- Gửi commit code với mess: git commit -m "message"
+
+2. 
+a, Tạo 3 file: file1, file2, file3 ( chưa thuộc vùng nào )
+
+b, Chạy lệnh: git init
+- Working Directory: file1, file2, file3
+
+c, Chạy lệnh: git commint -m"init project" => Lỗi
+- Working Directory: file1, file2, file3
+
+d, Chạy lệnh: git add file1
+- Working Directory: file1, file2, file3
+- Staging Area: file1
+
+e. Chạy lệnh: git commit -m"add file1"
+- Working Directory: file1, file2, file3
+- Repository: file1
+
+f. Chạy lệnh: git add file => Lỗi vì chưa tồn tại file có tên "file"
+- Working Directory: file1, file2, file3
+- Repository: file1
+- git init
+
+Sau khi cài đặt xong, cần cấu hình git:
+● Cho 1 repo
+○ git config user.name “<name>”
+○ git config user.email “<email>”
+● Cho toàn bộ máy tính (default)
+○ git config --global user.name
+“user”
+○ git config --global user.email
+“email”
+
+● Thực hành
+○ Tạo 2 thư mục: lesson-2-git1,
+lesson2-git2
+○ Khởi tạo git và thực hiện cấu hình
+■ lesson-2-git1: name=”Jame”,
+email=”jame@playwrightvn.co
+m”
+■ lesson-2-git2: name=”Alex”,
+email=”alex@playwrightvn.com
+”
+
+- Thêm file vào vùng staging:
+○ Thêm 1 file: git add <file_name>
+○ Thêm toàn bộ: git add .
+● Thực hành:
+○ lesson-2-git1:
+■ Thêm files: 01.txt, 02.txt
+■ Chạy lệnh: git add 01.txt
+○ lesson-2-git2:
+■ Thêm files: 03.txt, 04.txt
+■ Chạy lệnh: git add .
+
+- Commit: git commit-m”message”
+● Kiểm tra lịch sử commit:
+git log
